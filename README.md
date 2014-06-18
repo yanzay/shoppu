@@ -1,5 +1,9 @@
 # Shoppu
 
+[![Build Status](https://travis-ci.org/Yanzay/shoppu.svg?branch=master)](https://travis-ci.org/Yanzay/shoppu)
+[![Code Climate](https://codeclimate.com/github/Yanzay/shoppu.png)](https://codeclimate.com/github/Yanzay/shoppu)
+[![Code Climate](https://codeclimate.com/github/Yanzay/shoppu/coverage.png)](https://codeclimate.com/github/Yanzay/shoppu)
+
 Open platform for e-commerce as a service.
 
 ## Installation
