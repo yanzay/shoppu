@@ -2,8 +2,7 @@ require 'spec_helper'
 
 describe Shoppu::AddItemToOrder do
   let(:order) { Shoppu::OrdersRepo.create(domain: 'domain.com') }
-  let(:item) { Shoppu::ItemsRepo.create(domain: 'domain.com') }
-  let(:request) { {order_id: order.id, item_id: item.id} }
+  let(:request) { {order_id: order.id, item_id: 2} }
 
   it 'initializes with hash' do
     expect{described_class.new(request)}.to_not raise_error
