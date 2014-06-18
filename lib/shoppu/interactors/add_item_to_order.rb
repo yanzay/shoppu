@@ -1,7 +1,9 @@
-class AddItemToOrder
-  def initialize(params)
-  end
+module Shoppu
+  class AddItemToOrder
+    def initialize(params)
+    end
 
-  def execute
+    def execute
+    end
   end
 end

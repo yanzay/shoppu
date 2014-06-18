@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CreateOrder do
+describe Shoppu::CreateOrder do
   let(:request) { {domain_id: 'example.com', user_id: 1} }
 
   it 'initializes with hash' do
@@ -13,10 +13,10 @@ describe CreateOrder do
     it { should respond_to(:execute) }
 
     it 'creates new order' do
-      expect(OrdersRepo.count).to eq(0)
+      expect(Shoppu::OrdersRepo.count).to eq(0)
       subject.execute
-      expect(OrdersRepo.count).to eq(1)
-      order = OrdersRepo.first
+      expect(Shoppu::OrdersRepo.count).to eq(1)
+      order = Shoppu::OrdersRepo.first
       expect(order.user_id).to eq(request[:user_id])
       expect(order.domain_id).to eq(request[:domain_id])
     end

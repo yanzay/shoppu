@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Order do
+describe Shoppu::Order do
   it 'initializes with hash of domain_id and user_id' do
     domain_id = 1
     user_id = 2

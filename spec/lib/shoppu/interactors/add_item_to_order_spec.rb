@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe AddItemToOrder do
-  let(:order) { OrdersRepo.create(domain: 'domain.com') }
-  let(:item) { ItemsRepo.create(domain: 'domain.com') }
+describe Shoppu::AddItemToOrder do
+  let(:order) { Shoppu::OrdersRepo.create(domain: 'domain.com') }
+  let(:item) { Shoppu::ItemsRepo.create(domain: 'domain.com') }
   let(:request) { {order_id: order.id, item_id: item.id} }
 
   it 'initializes with hash' do
