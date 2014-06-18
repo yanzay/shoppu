@@ -2,3 +2,5 @@ language: ruby
 rvm:
   - 1.9.3
 cache: bundler
+env:
+  - CODECLIMATE_REPO_TOKEN=963e2a0b17603f9abfc6bf21459ea698de8747cb616463e65f6d2ec9a675495c
