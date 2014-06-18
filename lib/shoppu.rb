@@ -1,5 +1,7 @@
 require 'shoppu/version'
 
+require 'singleton'
+require 'shoppu/adapters/memory_store'
 Dir[File.dirname(__FILE__) + "/shoppu/interactors/*.rb"].each {|file| require file }
 Dir[File.dirname(__FILE__) + "/shoppu/entities/*.rb"].each {|file| require file }
 

@@ -1,31 +1,35 @@
 module Shoppu
   module Repository
-    @items = []
+
+    def adapter
+      Shoppu::MemoryStore.instance
+    end
 
     def model(model_class)
       @model = model_class
     end
 
     def count
-      @items.count
+      all.count
     end
 
     def create(params)
+      raise ArgumentError unless params
       item = @model.new(params)
-      @items << item
+      adapter.save(@model, item)
       item
     end
 
     def first
-      @items.first
+      all.first
     end
 
     def all
-      @items
+      adapter.get_all(@model)
     end
 
     def delete_all
-      @items = []
+      adapter.delete_all(@model)
     end
   end
 end

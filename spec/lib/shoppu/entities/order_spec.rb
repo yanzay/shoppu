@@ -12,4 +12,16 @@ describe Shoppu::Order do
   subject { described_class.new(domain_id: 1, user_id: 2) }
 
   it { should respond_to(:items) }
+
+  describe '#items' do
+    it 'returns order items' do
+      item = Shoppu::ItemsRepo.create({order_id: 2, product_id: 1, quantity: 2})
+      expect(subject.items.count).to eq(1)
+      expect(subject.items.first).to eq(item)
+    end
+
+    it 'returns empty array if there is no items' do
+      expect(subject.items).to eq([])
+    end
+  end
 end
