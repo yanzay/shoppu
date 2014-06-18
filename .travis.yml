@@ -1,5 +1,4 @@
 language: ruby
 rvm:
-  - 2.1.2
-  - rbx-2.2.9
-  - jruby-19mode
+  - 1.9.3
+cache: bundler
